@@ -1,8 +1,8 @@
-package github.chuyun923.algorithm.sorting;
+package github.chuyun923.algorithm;
 
 /**
  * Created by pengliang on 14-12-10.
  */
 public enum SortType {
-   INSERT_SORT,
+   INSERT_SORT,SELECT_SORT
 }

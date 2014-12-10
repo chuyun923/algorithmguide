@@ -1,5 +1,7 @@
 package github.chuyun923.algorithm.sorting;
 
+import github.chuyun923.algorithm.SortType;
+
 /**
  * Created by pengliang on 14-12-10.
  */
@@ -10,6 +12,9 @@ public class SortingManager {
         switch (sortType) {
             case INSERT_SORT:
                 sortingAlgorithm = new InsertSorting();
+                break;
+            case SELECT_SORT:
+                sortingAlgorithm = new SelectSorting();
                 break;
             default:
                 break;
