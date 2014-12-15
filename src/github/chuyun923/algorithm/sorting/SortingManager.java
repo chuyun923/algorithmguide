@@ -16,6 +16,9 @@ public class SortingManager {
             case SELECT_SORT:
                 sortingAlgorithm = new SelectSorting();
                 break;
+            case MERGE_SORT:
+                sortingAlgorithm = new MergeSorting();
+                break;
             default:
                 break;
         }

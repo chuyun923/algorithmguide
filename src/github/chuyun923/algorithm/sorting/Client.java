@@ -15,7 +15,7 @@ public class Client {
                         48,12,35,64,12,
                         56,42,26,97,34};
     public static void main(String[] args) {
-        SortingManager sortingManager = new SortingManager(SortType.SELECT_SORT);
+        SortingManager sortingManager = new SortingManager(SortType.MERGE_SORT);
         Utils.printIntArray(sortingManager.sort(src));
     }
 }
