@@ -19,6 +19,9 @@ public class SortingManager {
             case MERGE_SORT:
                 sortingAlgorithm = new MergeSorting();
                 break;
+            case BUBBLE_SORT:
+                sortingAlgorithm = new Bubblesorting();
+                break;
             default:
                 break;
         }
