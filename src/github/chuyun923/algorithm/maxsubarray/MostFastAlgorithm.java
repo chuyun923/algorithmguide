@@ -13,6 +13,7 @@ package github.chuyun923.algorithm.maxsubarray;
  *
  * 如果带下划线的子串是最大子串，那么子串前面和后面的元素之和应该都是负数(注意这里没有考虑全负数的情况)
  *
+ * 时间复杂度 O(n)
  */
 
 public class MostFastAlgorithm extends MaxSubArrayAl {
