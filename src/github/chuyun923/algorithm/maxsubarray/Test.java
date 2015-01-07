@@ -8,9 +8,12 @@ class Test {
         int array[] = {-1 ,-4 ,2 ,-1 ,3,-1};
         MaxSubArrayAl maxSubArrayAl = new BruteForceAlgorithm();
         MaxSubArrayAl maxSubArrayAl1 = new DivideConquerAlgorithm();
+        MaxSubArrayAl maxSubArrayAl2 = new MostBruteForceAlgorithm();
         SubArray subArray = maxSubArrayAl.findMaxMumSubArray(array);
         SubArray subArray1 = maxSubArrayAl1.findMaxMumSubArray(array);
-        subArray.printInfo();
-        subArray1.printInfo();
+        SubArray subArray2 = maxSubArrayAl2.findMaxMumSubArray(array);
+//        subArray.printInfo();
+//        subArray1.printInfo();
+        subArray2.printInfo();
     }
 }
