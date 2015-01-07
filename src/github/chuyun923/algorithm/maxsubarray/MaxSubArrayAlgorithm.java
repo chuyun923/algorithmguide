@@ -10,6 +10,8 @@ import java.util.List;
  * 1、最大子串在子数组的左边
  * 2、最大子串在子数组的右边
  * 3、最大子串横跨中间值(最大子串包括中间值)
+ *
+ * 复杂度：O(n*lgn)
  */
 public class MaxSubArrayAlgorithm {
 
@@ -34,7 +36,7 @@ public class MaxSubArrayAlgorithm {
 
     }
 
-    private static SubArray findMaxCrossingSubarray(int[] array,int low,int mid,int high) {
+    public static SubArray findMaxCrossingSubarray(int[] array,int low,int mid,int high) {
         class SearchResult {
             private int index;
             private int sum;
@@ -48,7 +50,7 @@ public class MaxSubArrayAlgorithm {
         searchLow.sum = searchLow.maxSum = searchHigh.sum = searchHigh.maxSum = 0;
 
         //扫描左边
-        for(int i = mid-1;i>=0;i--) {
+        for(int i = mid-1;i>=low;i--) {
             searchLow.sum += array[i];
             //这个地方可以带上`=`号可以找打一个最长的最大子串，去掉等号，找到最短最大子串
             if(searchLow.sum >= searchLow.maxSum) {
@@ -86,8 +88,8 @@ public class MaxSubArrayAlgorithm {
 
 class Test {
     public static void main(String args[]) {
-        int array[] = {1 ,-4 ,2 ,-1 ,3,-1};
-        SubArray subArray = MaxSubArrayAlgorithm.findMaxMumSubArray(array,0,array.length-1);
+        int array[] = {-1 ,-4 ,2 ,-1 ,3,-1};
+        SubArray subArray = BruteForceAlgorithm.getMaxSubArray(array);
         subArray.printInfo();
     }
 }
