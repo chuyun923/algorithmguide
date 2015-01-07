@@ -7,11 +7,11 @@ package github.chuyun923.algorithm.maxsubarray;
  * 思路是找到数组中每一个元素所在的最大子数组，然后比较，找出其中最大的就是最大子数组
  * 复杂度：O(n^2)
  */
-public class BruteForceAlgorithm {
-
-    public static SubArray getMaxSubArray(int array[]) {
+public class BruteForceAlgorithm extends MaxSubArrayAl{
+    @Override
+    public SubArray findMaxMumSubArray(int[] array) {
         SubArray subArray = new SubArray();
-        SubArray temp = new SubArray();
+        SubArray temp;
         subArray.sum = Integer.MIN_VALUE;
         if(array.length==1) {
             subArray.sum = array[0];
@@ -19,13 +19,12 @@ public class BruteForceAlgorithm {
             return subArray;
         }
         for(int i=0;i<array.length;i++) {
-            temp = MaxSubArrayAlgorithm.findMaxCrossingSubarray(array,0,i,array.length-1);
+            temp = findMaxCrossingSubarray(array,0,i,array.length-1);
             if(temp.compareTo(subArray)>=0) {
                 subArray = temp;
             }
         }
 
         return subArray;
-
     }
 }
