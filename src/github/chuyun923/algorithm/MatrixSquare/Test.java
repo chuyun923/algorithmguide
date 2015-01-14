@@ -26,7 +26,7 @@ class Test {
 
         matrix1.printInfo();
         matrix2.printInfo();
-        NormalAlgorithm.matrixSquare(matrix1,matrix2).printInfo();
+        MultiRecursive.multiRecursive(matrix1,matrix2).printInfo();
 
     }
 
