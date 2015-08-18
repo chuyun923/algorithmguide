@@ -14,4 +14,13 @@ public class Utils {
             System.out.print("  "+value);
         }
     }
+
+    /**
+     * 返回2为底，d的对数
+     * @param d
+     * @return
+     */
+    public static double log2(double d) {
+        return Math.log(d) / Math.log(2);
+    }
 }

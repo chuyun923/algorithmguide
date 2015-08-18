@@ -22,6 +22,10 @@ public class SortingManager {
             case BUBBLE_SORT:
                 sortingAlgorithm = new Bubblesorting();
                 break;
+            case QUICKSORT:
+                sortingAlgorithm = new QuickSort();
+            case HEAP_SORT:
+                sortingAlgorithm = new HeapSort();
             default:
                 break;
         }
