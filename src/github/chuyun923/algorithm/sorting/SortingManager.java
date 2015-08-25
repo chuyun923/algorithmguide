@@ -26,6 +26,8 @@ public class SortingManager {
                 sortingAlgorithm = new QuickSort();
             case HEAP_SORT:
                 sortingAlgorithm = new HeapSort();
+            case COUNT_SORT:
+                sortingAlgorithm = new CountSort();
             default:
                 break;
         }
