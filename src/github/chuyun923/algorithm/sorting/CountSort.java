@@ -5,6 +5,9 @@ package github.chuyun923.algorithm.sorting;
  *
  * 计数排序，时间复杂度O(n)---->前提是所有数的范围 <n
  * 需要额外的空间来帮助，比较适合于待排序列中数据范围比较集中的场景
+ * 本算法根据最小的元素进行偏移量操作，支持负数排序
+ *
+ * 稳定排序
  */
 public class CountSort implements SortingAlgorithm {
 

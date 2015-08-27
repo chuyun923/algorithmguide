@@ -28,6 +28,8 @@ public class SortingManager {
                 sortingAlgorithm = new HeapSort();
             case COUNT_SORT:
                 sortingAlgorithm = new CountSort();
+            case RADIX_SORT:
+                sortingAlgorithm = new RadixSort();
             default:
                 break;
         }
